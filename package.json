@@ -1,0 +1,16 @@
+{
+  "name": "react-fundamentos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RflBueno/react-fundamentos.git",
+  "author": "rafael bueno <rafael.bueno.c@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "7.12.11"
+  }
+}
