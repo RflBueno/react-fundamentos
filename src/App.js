@@ -1,14 +1,12 @@
-import React, { useState, createContext } from 'react';
+import React, { useState } from 'react';
 import Post from './Post';
 import Header from './Header';
+import { ThemeProvider } from './ThemeContext';
 
 
-
-export const ThemeContext = createContext('dark');
 
 function App() {
 
-    const [theme, setTheme] = useState('dark');
 
     const [posts, setPosts] = useState([
         { id: Math.random(), title: 'Título da notícia 01', subtitle: 'Subtítulo da notícia 01', likes: 10, read: false, },
@@ -20,9 +18,7 @@ function App() {
     console.log({ posts });
 
 
-    function handleToggleTheme() {
-        setTheme((prevState) => prevState === 'dark' ? 'light' : 'dark');
-    }
+    
 
     function handleRefresh() {
         // posts.push({ id: Math.random(), title: `Título da notícia ${posts.length + 1}`, subtitle: `Subtítulo da notícia ${posts.length + 1}`, likes: 40, });
@@ -37,11 +33,7 @@ function App() {
     }
 
     return (
-        <ThemeContext.Provider 
-        value={{
-            theme,
-            onToggleTheme: handleToggleTheme,
-            }}>
+        <ThemeProvider>
 
         <Header>
             <h2>Posts da semana
@@ -60,7 +52,7 @@ function App() {
             />
         ))}
         
-        </ThemeContext.Provider>
+        </ThemeProvider>
     );
 }
 
