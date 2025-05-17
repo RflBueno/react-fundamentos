@@ -5,15 +5,24 @@ import { ThemeContext } from './ThemeContext';
 
 export default function Header(props) {
     const { onToggleTheme } = useContext(ThemeContext);
-    
-    return(
-        <>
-        <header>
-            <h1>{props.title}</h1>
-            <Button onClick={onToggleTheme}>Mudar tema</Button>
-            {props.children}
-        </header>
-        </>
+
+    return (
+        <div
+            style={{
+                backgroundColor: '#EAE4D5',
+                color: '#000000',
+                padding: '10px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+            }}
+        >
+            <header>
+                <h1>{props.title}</h1>
+                <Button onClick={onToggleTheme}>Mudar tema</Button>
+                {props.children}
+            </header>
+        </div>
     );
 }
 
