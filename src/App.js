@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Post from './Post';
 import Header from './Header';
 import { ThemeProvider } from './ThemeContext';
-import styles from './App.scss';
+import  styles from './App.scss';
 
 
 
@@ -10,7 +10,7 @@ function App() {
 
 
     const [posts, setPosts] = useState([
-        { id: Math.random(), title: 'Título da notícia 01', subtitle: 'Subtítulo da notícia 01', likes: 10, read: false, removed: true },
+        { id: Math.random(), title: 'Título da notícia 01', subtitle: 'Subtítulo da notícia 01', likes: 10, read: false, removed: false },
         { id: Math.random(), title: 'Título da notícia 02', subtitle: 'Subtítulo da notícia 02', likes: 20, read: true, removed: false },
         { id: Math.random(), title: 'Título da notícia 03', subtitle: 'Subtítulo da notícia 03', likes: 30, read: false, removed: false },
     ]);
