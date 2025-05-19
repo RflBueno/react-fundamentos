@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types'
 import PostHeader from './PostHeader.js';
+import styles from './Post.scss';
 
 
 export default function Post(props) {
     
     return(
-        <>
-        <article>
+        <article className={styles.post}>
             <PostHeader 
                 onRemove={props.onRemove}
                 post={{
@@ -19,8 +19,6 @@ export default function Post(props) {
             <br />
             <span>{props.post.likes / 2} Média</span>
         </article>
-        <br />
-        </>
     );  
 }
 
