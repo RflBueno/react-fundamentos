@@ -7,7 +7,7 @@ import Layout from './components/Layout';
 import themes from './styles/themes';
 
 function App() {
-    const [theme, setTheme] = React.useState('dark');
+    const [theme, setTheme] = useState('dark');
 
     const currentTheme = useMemo(() => {
         return themes[theme] || themes.dark;
